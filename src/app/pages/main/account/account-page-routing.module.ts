@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountPageComponent } from "./account-page.component";
+import { EPage } from "../../../core/enums/page.enum";
 
 const routes: Routes = [
   {
@@ -8,15 +9,15 @@ const routes: Routes = [
     component: AccountPageComponent,
     children: [
       {
-        path: 'profile',
+        path: EPage.Profile,
         loadChildren: () => import('./profile/profile-page.module').then(m => m.ProfilePageModule)
       },
       {
-        path: 'characters',
+        path: EPage.Characters,
         loadChildren: () => import('./characters/characters-page.module').then(m => m.CharactersPageModule)
       },
       {
-          path: 'weapons',
+        path: EPage.AccountWeapons,
         loadChildren: () => import('./weapons/weapons-page.module').then(m => m.WeaponsPageModule)
       },
       {
