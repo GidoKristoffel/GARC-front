@@ -1,0 +1,20 @@
+@import "color";
+
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  background-color: $charcoal;
+  border-radius: 16px;
+  padding: 20px 16px;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-16 {
+  gap: 16px;
+}

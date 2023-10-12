@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'tvt-account',
+  selector: 'tvt-account-page',
   templateUrl: './account-page.component.html',
   styleUrls: ['./account-page.component.scss']
 })
