@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 import { EPage } from "../../../core/enums/page.enum";
 import { SecurityService } from "../../../core/services/security.service";
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthenticatedGuard implements CanActivate {
+export class AuthenticatedGuard  {
   constructor(private securityService: SecurityService, private router: Router) {}
 
   canActivate(

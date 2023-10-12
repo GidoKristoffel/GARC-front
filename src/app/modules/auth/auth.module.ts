@@ -5,6 +5,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { AuthorizationComponent } from "./components/authorization/authorization.component";
 import { InputModule } from "../../shared/components/input/input.module";
 import { ButtonModule } from "../../shared/components/button/button.module";
+import { TranslateModule } from "@ngx-translate/core";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ButtonModule } from "../../shared/components/button/button.module";
     imports: [
         CommonModule,
         InputModule,
-        ButtonModule
+        ButtonModule,
+        TranslateModule
     ],
   exports: [
     AuthorizationComponent

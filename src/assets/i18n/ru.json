@@ -1,0 +1,22 @@
+{
+  "page": {
+    "authorization": {
+      "login": {
+        "label": "Логин",
+        "placeholder": "Введите логин"
+      },
+      "password": {
+        "label": "Пароль",
+        "placeholder": "Введите пароль"
+      },
+      "btn": {
+        "sign-in": "Войти"
+      }
+    }
+  },
+  "language": {
+    "en": "Английский",
+    "ua": "Украинский",
+    "ru": "Русский"
+  }
+}
