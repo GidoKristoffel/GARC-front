@@ -1,0 +1,19 @@
+@import "color";
+@import "text";
+
+body {
+  color: $text-color-default;
+  background-color: $gunmetal;
+  font-family: monospace;
+  font-size: $text-size-default;
+  margin: 0;
+}
+
+input {
+  font-family: monospace;
+  cursor: text;
+}
+
+button {
+  cursor: pointer;
+}
