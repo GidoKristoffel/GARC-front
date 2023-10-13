@@ -1,0 +1,10 @@
+<div *ngIf="defaultOption" class="flex-column-right">
+  <div class="dropdown-input" (click)="toggle()">
+    {{ selected | translate }}
+  </div>
+  <div *ngIf="openSelector" (clickOutside)="close()">
+    <div *ngFor="let option of options" (click)="select(option)">
+      {{ option | translate }}
+    </div>
+  </div>
+</div>
