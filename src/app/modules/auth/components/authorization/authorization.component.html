@@ -1,5 +1,7 @@
-<div class="card flex-column gap-16">
+<div class="card flex-column-right gap-16">
   <tvt-text-input label="page.authorization.login.label" placeholder="page.authorization.login.placeholder"></tvt-text-input>
   <tvt-password-input label="page.authorization.password.label" placeholder="page.authorization.password.placeholder"></tvt-password-input>
+  <tvt-default-link label="page.authorization.account-recovery" [src]="recoveryLink"></tvt-default-link>
   <tvt-default-btn>{{ 'page.authorization.btn.sign-in' | translate }}</tvt-default-btn>
+  <tvt-horizontal-divider label="page.authorization.divider.label"></tvt-horizontal-divider>
 </div>

@@ -6,6 +6,8 @@ import { AuthorizationComponent } from "./components/authorization/authorization
 import { InputModule } from "../../shared/components/input/input.module";
 import { ButtonModule } from "../../shared/components/button/button.module";
 import { TranslateModule } from "@ngx-translate/core";
+import { LinkModule } from "../../shared/components/link/link.module";
+import { DividerModule } from "../../shared/components/divider/divider.module";
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { TranslateModule } from "@ngx-translate/core";
         CommonModule,
         InputModule,
         ButtonModule,
-        TranslateModule
+        TranslateModule,
+        LinkModule,
+        DividerModule
     ],
   exports: [
     AuthorizationComponent

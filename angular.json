@@ -34,7 +34,8 @@
               "src/styles/global.scss",
               "src/styles/layout.scss",
               "src/styles/positioning.scss",
-              "src/styles/input.scss"
+              "src/styles/input.scss",
+              "src/styles/effect.scss"
             ],
             "scripts": []
           },
@@ -98,7 +99,11 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/styles/global.scss"
+              "src/styles/global.scss",
+              "src/styles/layout.scss",
+              "src/styles/positioning.scss",
+              "src/styles/input.scss",
+              "src/styles/effect.scss"
             ],
             "scripts": []
           }
