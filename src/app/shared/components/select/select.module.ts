@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DefaultSelectComponent } from "./default-select/default-select.component";
 import { TranslateModule } from "@ngx-translate/core";
 import { SharedDirectivesModule } from "../../directives/shared-directives.module";
+import { SvgIconComponent } from "angular-svg-icon";
 
 
 
@@ -13,10 +14,11 @@ import { SharedDirectivesModule } from "../../directives/shared-directives.modul
   exports: [
     DefaultSelectComponent
   ],
-  imports: [
-    CommonModule,
-    TranslateModule,
-    SharedDirectivesModule
-  ]
+    imports: [
+        CommonModule,
+        TranslateModule,
+        SharedDirectivesModule,
+        SvgIconComponent
+    ]
 })
 export class SelectModule { }

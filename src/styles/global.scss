@@ -7,6 +7,7 @@ body {
   font-family: monospace;
   font-size: $text-size-default;
   margin: 0;
+  font-weight: 400;
 }
 
 input {
@@ -16,4 +17,8 @@ input {
 
 button {
   cursor: pointer;
+}
+
+label {
+  font-size: $text-label-size;
 }

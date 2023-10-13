@@ -9,8 +9,12 @@
         "label": "Пароль",
         "placeholder": "Введіть пароль"
       },
+      "account-recovery": "Забули пароль?",
       "btn": {
         "sign-in": "Увійти"
+      },
+      "divider": {
+        "label": "Або"
       }
     }
   },

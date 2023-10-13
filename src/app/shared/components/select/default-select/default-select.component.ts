@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { IOption } from "../../../interfaces/select.interface";
 
 @Component({
   selector: 'tvt-default-select',
@@ -6,7 +7,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
   styleUrls: ['./default-select.component.scss']
 })
 export class DefaultSelectComponent implements OnChanges {
-  @Input() options: string[] = [];
+  @Input() options: IOption[] = [];
   @Input() defaultOption: string = '';
   @Output() change: EventEmitter<string> = new EventEmitter<string>();
 
@@ -27,8 +28,8 @@ export class DefaultSelectComponent implements OnChanges {
     this.openSelector = false;
   }
 
-  public select(option: string): void {
-    this.selected = option;
-    this.change.emit(this.selected);
+  public select(option: IOption): void {
+    this.selected = option.label;
+    this.change.emit(option.value);
   }
 }

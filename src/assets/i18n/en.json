@@ -9,8 +9,12 @@
         "label": "Password",
         "placeholder": "Write password"
       },
+      "account-recovery": "Forgot password?",
       "btn": {
         "sign-in": "Sing in"
+      },
+      "divider": {
+        "label": "Or"
       }
     }
   },

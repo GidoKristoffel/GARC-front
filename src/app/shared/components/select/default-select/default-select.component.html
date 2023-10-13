@@ -1,10 +1,13 @@
-<div *ngIf="defaultOption" class="flex-column-right">
-  <div class="dropdown-input" (click)="toggle()">
-    {{ selected | translate }}
+<div *ngIf="defaultOption" class="flex-column-right disable-selection">
+  <div class="dropdown-input pointer default-select-input flex-left" (click)="toggle()">
+    <svg-icon src="./assets/images/icons/language.svg" [svgStyle]="{ 'width.px': 24, display: 'flex' }"></svg-icon>
+    <div class="default-select-text">
+      {{ selected | translate }}
+    </div>
   </div>
-  <div *ngIf="openSelector" (clickOutside)="close()">
+  <div class="pointer dropdown-options default-select-options" *ngIf="openSelector" (clickOutside)="close()">
     <div *ngFor="let option of options" (click)="select(option)">
-      {{ option | translate }}
+      {{ option.label | translate }}
     </div>
   </div>
 </div>

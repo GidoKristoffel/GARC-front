@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { getEnumValues } from "../../../../core/utilities/enum.utility";
+import { getEnumValues, isStringInEnum } from "../../../../core/utilities/enum.utility";
 import { ELanguage } from "../../../../core/enums/language.enum";
 import { LanguageService } from "../../../../core/services/language.service";
+import { IOption } from "../../../../shared/interfaces/select.interface";
 
 @Component({
   selector: 'tvt-language-picker',
@@ -9,7 +10,7 @@ import { LanguageService } from "../../../../core/services/language.service";
   styleUrls: ['./language-picker.component.scss']
 })
 export class LanguagePickerComponent implements OnInit {
-  public languages: string[] = [];
+  public languages: IOption[] = [];
   public selected!: string;
 
   constructor(
@@ -26,10 +27,19 @@ export class LanguagePickerComponent implements OnInit {
   }
 
   private initLanguages(): void {
-    this.languages = getEnumValues(ELanguage).map((language: ELanguage[keyof ELanguage]) => ('language.' + language));
+    this.languages =
+      getEnumValues(ELanguage)
+        .map((language: ELanguage[keyof ELanguage]): IOption => {
+          return {
+            label: 'language.' + language,
+            value: String(language)
+          }
+        });
   }
 
-  public setLanguage(language: ELanguage): void {
-    this.languageService.setLanguage(language);
+  public setLanguage(language: string): void {
+    if (isStringInEnum(language, ELanguage)) {
+      this.languageService.setLanguage(language as ELanguage);
+    }
   }
 }

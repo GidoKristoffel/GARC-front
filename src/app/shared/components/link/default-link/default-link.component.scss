@@ -1,0 +1,9 @@
+@import "./src/styles/color";
+
+.link {
+  color: rgba($white, 0.65);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

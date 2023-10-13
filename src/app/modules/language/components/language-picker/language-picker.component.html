@@ -1,16 +1,1 @@
-<!--<select *ngIf="selected" (change)="setLanguage(select.value)" #select>-->
-<!--  <option *ngFor="let language of languages" [value]="language" [selected]="language === selected">-->
-<!--    {{ ('language.' + language) | translate }}-->
-<!--  </option>-->
-<!--</select>-->
-
-<!--<div (click)="toggle()">-->
-<!--  {{ selected }}-->
-<!--</div>-->
-<!--<div *ngIf="openSelector" (mouseout)="closeSelect()">-->
-<!--  <div *ngFor="let language of languages" (click)="setLanguage(language)">-->
-<!--    {{ ('language.' + language) | translate }}-->
-<!--  </div>-->
-<!--</div>-->
-
-<tvt-default-select [options]="languages" [defaultOption]="selected"></tvt-default-select>
+<tvt-default-select [options]="languages" [defaultOption]="selected" (change)="setLanguage($event)"></tvt-default-select>
