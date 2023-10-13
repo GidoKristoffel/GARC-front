@@ -18,3 +18,17 @@
     border-color: rgba($white,.25);
   }
 }
+
+.dropdown-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $philippine-silver;
+  font-size: 12px;
+  font-weight: 400;
+  height: 32px;
+  border: 1px solid rgba($white, 0.08);
+  border-radius: 8px;
+  padding: 4px;
+  box-sizing: border-box;
+}
