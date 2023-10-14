@@ -1,3 +1,4 @@
 export enum ELocalStorage {
-  Language = 'language'
+  Language = 'language',
+  Token = 'token',
 }
