@@ -1,7 +1,13 @@
-<div class="card flex-column-right gap-16">
+<div class="authorization card flex-column-right">
   <tvt-text-input label="page.authorization.login.label" placeholder="page.authorization.login.placeholder"></tvt-text-input>
   <tvt-password-input label="page.authorization.password.label" placeholder="page.authorization.password.placeholder"></tvt-password-input>
   <tvt-default-link label="page.authorization.account-recovery" [src]="recoveryLink"></tvt-default-link>
   <tvt-default-btn>{{ 'page.authorization.btn.sign-in' | translate }}</tvt-default-btn>
   <tvt-horizontal-divider label="page.authorization.divider.label"></tvt-horizontal-divider>
+  <tvt-extended-fab-btn src="./assets/images/icons/google.svg" label="page.authorization.google.label"></tvt-extended-fab-btn>
+  <div class="registration flex-center">
+    <p>{{ 'page.authorization.registration.label' | translate }}</p>
+    &nbsp;
+    <tvt-default-link label="page.authorization.registration.link" [src]="registrationLink"></tvt-default-link>
+  </div>
 </div>

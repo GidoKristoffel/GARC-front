@@ -6,4 +6,8 @@
   &:hover {
     text-decoration: underline;
   }
+
+  &:active {
+    color: $tan-2;
+  }
 }

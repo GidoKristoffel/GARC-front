@@ -15,6 +15,44 @@
       },
       "divider": {
         "label": "Or"
+      },
+      "google": {
+        "label": "Google"
+      },
+      "registration": {
+        "label": "Don't have an account?",
+        "link": "Sign Un"
+      }
+    },
+    "registration": {
+      "login": {
+        "label": "Login",
+        "placeholder": "Write login"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Write Email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Write password"
+      },
+      "password-repeat": {
+        "label": "Repeat password",
+        "placeholder": "Write password again"
+      },
+      "btn": {
+        "sign-up": "Sign up"
+      },
+      "divider": {
+        "label": "Or"
+      },
+      "google": {
+        "label": "Google"
+      },
+      "authorization": {
+        "label": "Already have an account?",
+        "link": "Sign In"
       }
     }
   },

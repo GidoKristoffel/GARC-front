@@ -23,9 +23,10 @@ import { DividerModule } from "../../shared/components/divider/divider.module";
         LinkModule,
         DividerModule
     ],
-  exports: [
-    AuthorizationComponent
-  ],
+    exports: [
+        AuthorizationComponent,
+        RegistrationComponent
+    ],
   providers: [
     AuthService,
   ]

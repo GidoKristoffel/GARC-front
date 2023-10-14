@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 import { EPage } from "../../../core/enums/page.enum";
-import { SecurityService } from "../../../core/services/security.service";
+import { SecurityService } from "../../../core/services/security/security.service";
 
 @Injectable({
   providedIn: 'root',

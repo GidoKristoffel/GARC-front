@@ -15,6 +15,44 @@
       },
       "divider": {
         "label": "Або"
+      },
+      "google": {
+        "label": "Google"
+      },
+      "registration": {
+        "label": "Вже є обліковий запис?",
+        "link": "Увійти"
+      }
+    },
+    "registration": {
+      "login": {
+        "label": "Логін",
+        "placeholder": "Введіть логін"
+      },
+      "email": {
+        "label": "Електронна пошта",
+        "placeholder": "Введіть електронну пошту"
+      },
+      "password": {
+        "label": "Пароль",
+        "placeholder": "Введіть пароль"
+      },
+      "password-repeat": {
+        "label": "Повторіть пароль",
+        "placeholder": "Введіть пароль ще раз"
+      },
+      "btn": {
+        "sign-up": "Зареєструватись"
+      },
+      "divider": {
+        "label": "Або"
+      },
+      "google": {
+        "label": "Google"
+      },
+      "authorization": {
+        "label": "У вас вже є обліковий запис?",
+        "link": "Увійти"
       }
     }
   },

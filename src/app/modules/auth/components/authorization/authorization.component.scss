@@ -1,3 +1,36 @@
 tvt-default-btn {
   margin-left: auto;
 }
+
+.registration {
+  width: 100%;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.authorization {
+  width: 285px;
+  box-sizing: border-box;
+
+  & > tvt-text-input {
+    margin-bottom: 16px;
+  }
+
+  & > tvt-password-input {
+    margin-bottom: 4px;
+  }
+
+  & > tvt-default-link {
+    margin-bottom: 16px;
+  }
+
+  & > tvt-horizontal-divider {
+    margin: 8px 0;
+  }
+
+  & > tvt-extended-fab-btn {
+    margin-bottom: 4px;
+  }
+}

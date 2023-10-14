@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { getEnumValues, isStringInEnum } from "../../../../core/utilities/enum.utility";
 import { ELanguage } from "../../../../core/enums/language.enum";
-import { LanguageService } from "../../../../core/services/language.service";
+import { LanguageService } from "../../../../core/services/language/language.service";
 import { IOption } from "../../../../shared/interfaces/select.interface";
 
 @Component({

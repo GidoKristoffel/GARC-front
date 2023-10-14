@@ -15,6 +15,44 @@
       },
       "divider": {
         "label": "Или"
+      },
+      "google": {
+        "label": "Google"
+      },
+      "registration": {
+        "label": "Уже есть аккаунт?",
+        "link": "Войти"
+      }
+    },
+    "registration": {
+      "login": {
+        "label": "Логин",
+        "placeholder": "Введите логин"
+      },
+      "email": {
+        "label": "Электронная почта",
+        "placeholder": "Введите электронную почту"
+      },
+      "password": {
+        "label": "Пароль",
+        "placeholder": "Введите пароль"
+      },
+      "password-repeat": {
+        "label": "Повторите пароль",
+        "placeholder": "Введите пароль еще раз"
+      },
+      "btn": {
+        "sign-up": "Зарегистрироваться"
+      },
+      "divider": {
+        "label": "Или"
+      },
+      "google": {
+        "label": "Google"
+      },
+      "authorization": {
+        "label": "У вас уже есть аккаунт?",
+        "link": "Войти"
       }
     }
   },

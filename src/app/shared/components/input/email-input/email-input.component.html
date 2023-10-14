@@ -1,0 +1,4 @@
+<div class="flex-column gap-8">
+  <label *ngIf="label">{{ label | translate }}</label>
+  <input type="text" class="input" [inputMask]="emailInputMask" placeholder="{{ placeholder | translate }}">
+</div>
