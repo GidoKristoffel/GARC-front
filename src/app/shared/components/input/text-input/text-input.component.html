@@ -1,4 +1,6 @@
-<div class="flex-column gap-8">
-  <label *ngIf="label">{{ label | translate }}</label>
-  <input type="text" class="input" [placeholder]="placeholder | translate">
-</div>
+<ng-container [formGroup]="form">
+  <div class="flex-column gap-8">
+    <label *ngIf="label">{{ label | translate }}</label>
+    <input type="text" class="input" [placeholder]="placeholder | translate" [formControlName]="formField">
+  </div>
+</ng-container>

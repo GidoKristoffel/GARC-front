@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TextInputComponent } from './text-input/text-input.component';
 import { PasswordInputComponent } from './password-input/password-input.component';
 import { TranslateModule } from "@ngx-translate/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { EmailInputComponent } from './email-input/email-input.component';
 import { InputMaskModule } from "@ngneat/input-mask";
 
@@ -23,7 +23,8 @@ import { InputMaskModule } from "@ngneat/input-mask";
     CommonModule,
     TranslateModule,
     FormsModule,
-    InputMaskModule
+    InputMaskModule,
+    ReactiveFormsModule
   ]
 })
 export class InputModule {

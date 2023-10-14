@@ -8,6 +8,7 @@ import { ButtonModule } from "../../shared/components/button/button.module";
 import { TranslateModule } from "@ngx-translate/core";
 import { LinkModule } from "../../shared/components/link/link.module";
 import { DividerModule } from "../../shared/components/divider/divider.module";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -15,14 +16,15 @@ import { DividerModule } from "../../shared/components/divider/divider.module";
     AuthorizationComponent,
     RegistrationComponent
   ],
-    imports: [
-        CommonModule,
-        InputModule,
-        ButtonModule,
-        TranslateModule,
-        LinkModule,
-        DividerModule
-    ],
+  imports: [
+    CommonModule,
+    InputModule,
+    ButtonModule,
+    TranslateModule,
+    LinkModule,
+    DividerModule,
+    ReactiveFormsModule
+  ],
     exports: [
         AuthorizationComponent,
         RegistrationComponent

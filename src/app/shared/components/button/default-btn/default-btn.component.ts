@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { EBtnType } from "../../../../core/enums/btn-type.enum";
 
 @Component({
   selector: 'tvt-default-btn',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./default-btn.component.scss']
 })
 export class DefaultBtnComponent {
-
+  @Input() type: EBtnType = EBtnType.Button;
 }
