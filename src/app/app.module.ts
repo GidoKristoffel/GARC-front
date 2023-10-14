@@ -1,3 +1,4 @@
+import { InputMaskModule } from '@ngneat/input-mask';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -28,14 +29,15 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    AngularSvgIconModule.forRoot()
+    AngularSvgIconModule.forRoot(),
+    InputMaskModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true,
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })

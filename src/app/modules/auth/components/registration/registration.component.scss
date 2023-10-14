@@ -1,0 +1,24 @@
+.authorization {
+  width: 100%;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.registration {
+  width: 285px;
+  box-sizing: border-box;
+
+  & > tvt-text-input, & > tvt-email-input, & > tvt-password-input {
+    margin-bottom: 16px;
+  }
+
+  & > tvt-horizontal-divider {
+    margin: 8px 0;
+  }
+
+  & > tvt-extended-fab-btn {
+    margin-bottom: 4px;
+  }
+}

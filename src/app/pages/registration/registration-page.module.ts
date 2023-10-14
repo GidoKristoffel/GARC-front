@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { RegistrationPageRoutingModule } from './registration-page-routing.module';
 import { RegistrationPageComponent } from "./registration-page.component";
+import { LanguageModule } from "../../modules/language/language.module";
+import { AuthModule } from "../../modules/auth/auth.module";
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { RegistrationPageComponent } from "./registration-page.component";
   ],
   imports: [
     CommonModule,
-    RegistrationPageRoutingModule
+    RegistrationPageRoutingModule,
+    LanguageModule,
+    AuthModule
   ]
 })
 export class RegistrationPageModule { }
