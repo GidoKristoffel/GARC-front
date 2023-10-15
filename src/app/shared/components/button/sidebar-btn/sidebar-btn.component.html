@@ -1,4 +1,4 @@
-<div (click)="redirectTo()">
-  <svg-icon *ngIf="icon" [src]="icon"></svg-icon>
-  <div>{{ label }}</div>
+<div class="sidebar-btn pointer flex-align-center" (click)="redirectTo()">
+  <svg-icon *ngIf="icon" [src]="icon" [svgStyle]="{ 'width.px': 24, display: 'flex' }"></svg-icon>
+  <div>{{ label | translate }}</div>
 </div>
