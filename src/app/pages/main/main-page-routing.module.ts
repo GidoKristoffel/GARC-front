@@ -2,25 +2,27 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from "./main-page.component";
 
+import { EPage } from "../../core/enums/page.enum";
+
 const routes: Routes = [
   {
-    path: '',
+    path: EPage.Empty,
     component: MainPageComponent,
     children: [
       {
-        path: 'dashboard',
+        path: EPage.Dashboard,
         loadChildren: () => import('./dashboard/dashboard-page.module').then(m => m.DashboardPageModule)
       },
       {
-        path: 'account',
+        path: EPage.Account,
         loadChildren: () => import('./account/account-page.module').then(m => m.AccountPageModule)
       },
       {
-        path: 'calculation',
+        path: EPage.Calculation,
         loadChildren: () => import('./calculation/calculation-page.module').then(m => m.CalculationPageModule)
       },
       {
-        path: 'settings',
+        path: EPage.Settings,
         loadChildren: () => import('./settings/settings-page.module').then(m => m.SettingsPageModule)
       }
     ]

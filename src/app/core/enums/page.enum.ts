@@ -3,10 +3,15 @@ export enum EPage {
   Authorization = 'authorization',
   Registration = 'registration',
   Main = 'main',
+  Dashboard = 'dashboard',
+  Account = 'account',
+  Calculation = 'calculation',
+  Settings = 'settings',
   Artifacts = 'artifacts',
   Talents = 'talents',
   Weapons = 'weapons',
   Profile = 'profile',
   Characters = 'characters',
-  AccountWeapons = 'weapons'
+  AccountWeapons = 'weapons',
+  Materials = 'materials'
 }

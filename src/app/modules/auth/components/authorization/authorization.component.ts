@@ -24,7 +24,6 @@ export class AuthorizationComponent {
   ) {}
 
   public logIn(): void {
-    console.log(this.form);
-    // this.authService.logIn('', '');
+    this.authService.logIn(String(this.form.value.login), String(this.form.value.password));
   }
 }
