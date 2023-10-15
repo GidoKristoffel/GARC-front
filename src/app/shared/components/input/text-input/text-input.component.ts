@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-form";
 import { FormGroupDirective } from "@angular/forms";
 
@@ -10,8 +10,11 @@ import { FormGroupDirective } from "@angular/forms";
 export class TextInputComponent extends InjectReactiveForm {
   @Input() label: string = '';
   @Input() placeholder: string = '';
+  @Input() formField: string = '';
 
-  constructor(protected override rootFormGroup: FormGroupDirective, protected override el: ElementRef) {
-    super(rootFormGroup, el);
+  constructor(
+    protected override rootFormGroup: FormGroupDirective,
+  ) {
+    super(rootFormGroup);
   }
 }

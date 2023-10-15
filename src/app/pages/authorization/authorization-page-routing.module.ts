@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthorizationPageComponent } from "./authorization-page.component";
+import { EPage } from "../../core/enums/page.enum";
 
 const routes: Routes = [
   {
-    path: '',
+    path: EPage.Empty,
     component: AuthorizationPageComponent
   }
 ];

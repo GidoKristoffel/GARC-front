@@ -5,7 +5,7 @@ import { EPage } from "../../../core/enums/page.enum";
 
 const routes: Routes = [
   {
-    path: '',
+    path: EPage.Empty,
     component: CalculationPageComponent,
     children: [
       {

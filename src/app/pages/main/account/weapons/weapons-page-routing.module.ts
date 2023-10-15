@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WeaponsPageComponent } from "./weapons-page.component";
+import { EPage } from "../../../../core/enums/page.enum";
 
 const routes: Routes = [
   {
-    path: '',
+    path: EPage.Empty,
     component: WeaponsPageComponent
   }
 ];

@@ -5,7 +5,7 @@ import { EPage } from "../../../core/enums/page.enum";
 
 const routes: Routes = [
   {
-    path: '',
+    path: EPage.Empty,
     component: AccountPageComponent,
     children: [
       {
@@ -21,7 +21,7 @@ const routes: Routes = [
         loadChildren: () => import('./weapons/weapons-page.module').then(m => m.WeaponsPageModule)
       },
       {
-        path: 'materials',
+        path: EPage.Materials,
         loadChildren: () => import('./materials/materials-page.module').then(m => m.MaterialsPageModule)
       }
     ]
