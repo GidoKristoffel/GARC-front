@@ -54,6 +54,21 @@
         "label": "У вас уже есть аккаунт?",
         "link": "Войти"
       }
+    },
+    "main": {
+      "sidebar": {
+        "dashboard": "Информационная панель",
+        "account": "Аккаунт",
+        "profile": "Профиль",
+        "account-weapons": "Оружие",
+        "materials": "Материалы",
+        "calculation": "Расчеты",
+        "artifacts": "Артефакты",
+        "talents": "Таланты",
+        "weapons": "Оружие",
+        "settings": "Настройки",
+        "exit": "Выход"
+      }
     }
   },
   "language": {
