@@ -54,6 +54,21 @@
         "label": "Already have an account?",
         "link": "Sign In"
       }
+    },
+    "main": {
+      "sidebar": {
+        "dashboard": "Dashboard",
+        "account": "Account",
+        "profile": "Profile",
+        "account-weapons": "Weapons",
+        "materials": "Materials",
+        "calculation": "Calculation",
+        "artifacts": "Artifacts",
+        "talents": "Talents",
+        "weapons": "Weapons",
+        "settings": "Settings",
+        "exit": "Sing out"
+      }
     }
   },
   "language": {

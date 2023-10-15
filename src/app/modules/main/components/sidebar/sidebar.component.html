@@ -1,6 +1,20 @@
 <div class="sidebar">
-  <tvt-sidebar-btn icon="./assets/images/icons/dashboard.svg" label="page.main.sidebar.dashboard" [link]="page.Dashboard"></tvt-sidebar-btn>
-  <div>{{ 'page.main.sidebar.account' | translate }}</div>
-  <tvt-horizontal-divider></tvt-horizontal-divider>
-  <tvt-sidebar-btn icon="./assets/images/icons/account.svg" label="page.main.sidebar.account" [link]="page.Account"></tvt-sidebar-btn>
+  <div class="flex-column gap-4">
+    <tvt-sidebar-btn icon="./assets/images/icons/dashboard.svg" label="page.main.sidebar.dashboard" [link]="page.dashboard"></tvt-sidebar-btn>
+    <div>{{ 'page.main.sidebar.account' | translate }}</div>
+    <tvt-horizontal-divider></tvt-horizontal-divider>
+    <tvt-sidebar-btn icon="./assets/images/icons/account.svg" label="page.main.sidebar.profile" [link]="page.profile"></tvt-sidebar-btn>
+    <tvt-sidebar-btn icon="./assets/images/icons/account-weapons.svg" label="page.main.sidebar.account-weapons" [link]="page.accountWeapons"></tvt-sidebar-btn>
+    <tvt-sidebar-btn icon="./assets/images/icons/materials.svg" label="page.main.sidebar.materials" [link]="page.materials"></tvt-sidebar-btn>
+    <div>{{ 'page.main.sidebar.calculation' | translate }}</div>
+    <tvt-horizontal-divider></tvt-horizontal-divider>
+    <tvt-sidebar-btn icon="./assets/images/icons/artifacts.svg" label="page.main.sidebar.artifacts" [link]="page.artifacts"></tvt-sidebar-btn>
+    <tvt-sidebar-btn icon="./assets/images/icons/talents.svg" label="page.main.sidebar.talents" [link]="page.talents"></tvt-sidebar-btn>
+    <tvt-sidebar-btn icon="./assets/images/icons/weapons.svg" label="page.main.sidebar.weapons" [link]="page.weapons"></tvt-sidebar-btn>
+  </div>
+  <div>
+    <tvt-sidebar-btn icon="./assets/images/icons/settings.svg" label="page.main.sidebar.settings" [link]="page.settings"></tvt-sidebar-btn>
+    <tvt-horizontal-divider></tvt-horizontal-divider>
+    <tvt-sidebar-btn icon="./assets/images/icons/exit.svg" label="page.main.sidebar.exit" (click)="logOut()"></tvt-sidebar-btn>
+  </div>
 </div>

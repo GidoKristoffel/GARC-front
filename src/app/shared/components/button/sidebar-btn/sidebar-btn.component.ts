@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Router } from "@angular/router";
-import { EPage } from "../../../../core/enums/page.enum";
 
 @Component({
   selector: 'tvt-sidebar-btn',
@@ -10,7 +9,7 @@ import { EPage } from "../../../../core/enums/page.enum";
 export class SidebarBtnComponent {
   @Input() icon: string = '';
   @Input() label: string = '';
-  @Input() link!: EPage;
+  @Input() link!: string;
 
   constructor(
     private router: Router
@@ -18,6 +17,7 @@ export class SidebarBtnComponent {
 
   public redirectTo(): void {
     if (this.link) {
+      console.log(this.link);
       this.router.navigate([this.link]).then();
     }
   }

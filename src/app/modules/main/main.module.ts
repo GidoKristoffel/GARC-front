@@ -19,6 +19,6 @@ import { DividerModule } from "../../shared/components/divider/divider.module";
     ButtonModule,
     TranslateModule,
     DividerModule
-  ]
+  ],
 })
 export class MainModule { }

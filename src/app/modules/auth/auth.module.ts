@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthService } from "./services/auth.service";
 import { RegistrationComponent } from './components/registration/registration.component';
 import { AuthorizationComponent } from "./components/authorization/authorization.component";
 import { InputModule } from "../../shared/components/input/input.module";
@@ -25,12 +24,10 @@ import { ReactiveFormsModule } from "@angular/forms";
     DividerModule,
     ReactiveFormsModule
   ],
-    exports: [
-        AuthorizationComponent,
-        RegistrationComponent
-    ],
-  providers: [
-    AuthService,
+  exports: [
+    AuthorizationComponent,
+    RegistrationComponent
   ]
 })
-export class AuthModule {}
+export class AuthModule {
+}

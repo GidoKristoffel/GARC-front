@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { EPage } from "../../../../core/enums/page.enum";
-import { AuthService } from "../../services/auth.service";
 import { FormBuilder } from "@angular/forms";
 import { EBtnType } from "../../../../core/enums/btn-type.enum";
+import { SignService } from "../../../../core/services/sign/sign.service";
 
 @Component({
   selector: 'tvt-authorization',
@@ -19,11 +19,11 @@ export class AuthorizationComponent {
   });
 
   constructor(
-    private authService: AuthService,
+    private signService: SignService,
     private fb: FormBuilder
   ) {}
 
   public logIn(): void {
-    this.authService.logIn(String(this.form.value.login), String(this.form.value.password));
+    this.signService.logIn(String(this.form.value.login), String(this.form.value.password));
   }
 }
