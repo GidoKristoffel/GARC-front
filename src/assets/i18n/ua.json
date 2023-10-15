@@ -54,6 +54,21 @@
         "label": "У вас вже є обліковий запис?",
         "link": "Увійти"
       }
+    },
+    "main": {
+      "sidebar": {
+        "dashboard": "Інформаційна панель",
+        "account": "Аккаунт",
+        "profile": "Профіль",
+        "account-weapons": "Зброя",
+        "materials": "Матеріали",
+        "calculation": "Розрахунки",
+        "artifacts": "Артефакти",
+        "talents": "Таланти",
+        "weapons": "Зброя",
+        "settings": "Налаштування",
+        "exit": "Вихід"
+      }
     }
   },
   "language": {

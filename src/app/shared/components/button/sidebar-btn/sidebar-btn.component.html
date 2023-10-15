@@ -1,4 +1,4 @@
-<div class="sidebar-btn pointer flex-align-center" (click)="redirectTo()">
-  <svg-icon *ngIf="icon" [src]="icon" [svgStyle]="{ 'width.px': 24, display: 'flex' }"></svg-icon>
-  <div>{{ label | translate }}</div>
+<div class="sidebar-btn pointer ellipsis flex-align-center" (click)="redirectTo()">
+  <svg-icon *ngIf="icon" [src]="icon" [svgStyle]="{ 'width.px': 18, display: 'flex' }"></svg-icon>
+  <div class="ellipsis">{{ label | translate }}</div>
 </div>
