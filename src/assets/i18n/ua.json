@@ -20,8 +20,8 @@
         "label": "Google"
       },
       "registration": {
-        "label": "Вже є обліковий запис?",
-        "link": "Увійти"
+        "label": "Немає аккаунту?",
+        "link": "Зареєструватись"
       }
     },
     "registration": {

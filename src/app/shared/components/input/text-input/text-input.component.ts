@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-form";
+import { InjectReactiveForm } from "../../../../core/classes/inject-reactive-form/inject-reactive-form";
 import { FormGroupDirective } from "@angular/forms";
 
 @Component({
