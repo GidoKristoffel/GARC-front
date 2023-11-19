@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { EPage } from "../../../../core/enums/page.enum";
-import { FormBuilder } from "@angular/forms";
+import { FormBuilder, Validators } from "@angular/forms";
+import { EBtnType } from "../../../../core/enums/btn-type.enum";
+import { RegistrationService } from "../../services/registration/registration.service";
+import { IRegistrationFormValue } from "../../interfaces/form.interface";
 
 @Component({
   selector: 'tvt-registration',
@@ -9,17 +12,26 @@ import { FormBuilder } from "@angular/forms";
 })
 export class RegistrationComponent {
   public readonly authorizationLink: EPage = EPage.Authorization;
+  public readonly btnType: EBtnType = EBtnType.Submit;
   public form = this.fb.group({
-    login: [''],
-    password: [''],
-    "password-repeat": ['']
+    username: ['', [Validators.required]],
+    email: ['', [Validators.required]],
+    password: ['', [Validators.required]],
+    passwordRepeat: ['', [Validators.required]]
   });
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private registrationService: RegistrationService
   ) {}
 
-  public signIn(): void {
-
+  public signUp(): void {
+    const form: IRegistrationFormValue = {
+      username: this.form.value.username as string,
+      email: this.form.value.email as string,
+      password: this.form.value.password as string,
+      passwordRepeat: this.form.value.passwordRepeat as string
+    };
+    this.registrationService.singUp(form);
   }
 }

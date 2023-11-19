@@ -25,9 +25,9 @@
       }
     },
     "registration": {
-      "login": {
-        "label": "Login",
-        "placeholder": "Write login"
+      "username": {
+        "label": "Username",
+        "placeholder": "Write username"
       },
       "email": {
         "label": "Email",

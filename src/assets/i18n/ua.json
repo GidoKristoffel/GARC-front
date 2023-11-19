@@ -25,9 +25,9 @@
       }
     },
     "registration": {
-      "login": {
-        "label": "Логін",
-        "placeholder": "Введіть логін"
+      "username": {
+        "label": "Ім'я користувача",
+        "placeholder": "Введіть iм'я користувача"
       },
       "email": {
         "label": "Електронна пошта",
