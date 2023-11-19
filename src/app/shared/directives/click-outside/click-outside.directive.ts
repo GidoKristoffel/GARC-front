@@ -14,7 +14,7 @@ export class ClickOutsideDirective {
   private initialized: boolean = false;
 
   constructor(private elementRef: ElementRef) {
-    setInterval(() => {
+    setInterval((): void => {
       this.initialized = true;
     }, 0);
   }
@@ -22,7 +22,7 @@ export class ClickOutsideDirective {
   @HostListener('document:click', ['$event.target'])
   onClick(target: any): void {
     if (this.initialized) {
-      const clickedInside = this.elementRef.nativeElement.contains(target);
+      const clickedInside: boolean = this.elementRef.nativeElement.contains(target);
 
       if (!clickedInside) {
         this.clickOutside.emit();

@@ -25,9 +25,9 @@
       }
     },
     "registration": {
-      "login": {
-        "label": "Логин",
-        "placeholder": "Введите логин"
+      "username": {
+        "label": "Имя пользователя",
+        "placeholder": "Введите имя пользователя"
       },
       "email": {
         "label": "Электронная почта",

@@ -1,9 +1,9 @@
-<form [formGroup]="form" (ngSubmit)="signIn()" class="registration card flex-column-right">
-  <tvt-text-input formField="login" label="page.registration.login.label" placeholder="page.registration.login.placeholder"></tvt-text-input>
-  <tvt-email-input label="page.registration.email.label" placeholder="page.registration.email.placeholder"></tvt-email-input>
+<form [formGroup]="form" (ngSubmit)="signUp()" class="registration card flex-column-right">
+  <tvt-text-input formField="username" label="page.registration.username.label" placeholder="page.registration.username.placeholder"></tvt-text-input>
+  <tvt-email-input formField="email" label="page.registration.email.label" placeholder="page.registration.email.placeholder"></tvt-email-input>
   <tvt-password-input formField="password" label="page.registration.password.label" placeholder="page.registration.password.placeholder"></tvt-password-input>
-  <tvt-password-input formField="password-repeat" label="page.registration.password-repeat.label" placeholder="page.registration.password-repeat.placeholder"></tvt-password-input>
-  <tvt-default-btn>{{ 'page.registration.btn.sign-up' | translate }}</tvt-default-btn>
+  <tvt-password-input formField="passwordRepeat" label="page.registration.password-repeat.label" placeholder="page.registration.password-repeat.placeholder"></tvt-password-input>
+  <tvt-default-btn [type]="btnType">{{ 'page.registration.btn.sign-up' | translate }}</tvt-default-btn>
   <tvt-horizontal-divider label="page.registration.divider.label"></tvt-horizontal-divider>
   <tvt-extended-fab-btn src="./assets/images/icons/google.svg" label="page.registration.google.label"></tvt-extended-fab-btn>
   <div class="authorization flex-center">
