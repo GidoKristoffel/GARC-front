@@ -11,7 +11,7 @@ import {
 })
 export class ClickOutsideDirective {
   @Output() clickOutside: EventEmitter<void> = new EventEmitter<void>();
-  private initialized = false;
+  private initialized: boolean = false;
 
   constructor(private elementRef: ElementRef) {
     setInterval(() => {
