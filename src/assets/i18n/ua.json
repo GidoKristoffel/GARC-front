@@ -1,9 +1,9 @@
 {
   "page": {
     "authorization": {
-      "login": {
-        "label": "Логін",
-        "placeholder": "Введіть логін"
+      "email": {
+        "label": "Електронна пошта",
+        "placeholder": "Введіть електронну пошту"
       },
       "password": {
         "label": "Пароль",

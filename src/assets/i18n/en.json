@@ -1,9 +1,9 @@
 {
   "page": {
     "authorization": {
-      "login": {
-        "label": "Login",
-        "placeholder": "Write login"
+      "email": {
+        "label": "Email",
+        "placeholder": "Write email"
       },
       "password": {
         "label": "Password",
