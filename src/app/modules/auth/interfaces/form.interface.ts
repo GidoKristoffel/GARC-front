@@ -4,3 +4,9 @@ export interface IRegistrationFormValue {
   password: string;
   passwordRepeat: string;
 }
+
+
+export interface IAuthorizationForm {
+  email: string;
+  password: string;
+}
