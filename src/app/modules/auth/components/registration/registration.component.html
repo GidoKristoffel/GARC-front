@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="signUp()" class="registration card flex-column-right">
   <tvt-text-input formField="username" label="page.registration.username.label" placeholder="page.registration.username.placeholder"></tvt-text-input>
-  <tvt-email-input formField="email" label="page.registration.email.label" placeholder="page.registration.email.placeholder"></tvt-email-input>
+  <tvt-text-input formField="email" label="page.registration.email.label" placeholder="page.registration.email.placeholder" [autocomplete]="autocomplete"></tvt-text-input>
   <tvt-password-input formField="password" label="page.registration.password.label" placeholder="page.registration.password.placeholder"></tvt-password-input>
   <tvt-password-input formField="passwordRepeat" label="page.registration.password-repeat.label" placeholder="page.registration.password-repeat.placeholder"></tvt-password-input>
   <tvt-default-btn [type]="btnType">{{ 'page.registration.btn.sign-up' | translate }}</tvt-default-btn>

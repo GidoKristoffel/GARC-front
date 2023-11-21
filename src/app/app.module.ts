@@ -1,4 +1,3 @@
-import { InputMaskModule } from '@ngneat/input-mask';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -30,7 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
       }
     }),
     AngularSvgIconModule.forRoot(),
-    InputMaskModule
   ],
   providers: [
     {

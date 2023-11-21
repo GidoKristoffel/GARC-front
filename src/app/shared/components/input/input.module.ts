@@ -4,26 +4,21 @@ import { TextInputComponent } from './text-input/text-input.component';
 import { PasswordInputComponent } from './password-input/password-input.component';
 import { TranslateModule } from "@ngx-translate/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { EmailInputComponent } from './email-input/email-input.component';
-import { InputMaskModule } from "@ngneat/input-mask";
 
 
 @NgModule({
   declarations: [
     TextInputComponent,
-    PasswordInputComponent,
-    EmailInputComponent
+    PasswordInputComponent
   ],
   exports: [
     TextInputComponent,
-    PasswordInputComponent,
-    EmailInputComponent
+    PasswordInputComponent
   ],
   imports: [
     CommonModule,
     TranslateModule,
     FormsModule,
-    InputMaskModule,
     ReactiveFormsModule
   ]
 })

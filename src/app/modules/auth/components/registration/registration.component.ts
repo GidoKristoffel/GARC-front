@@ -4,6 +4,7 @@ import { FormBuilder, Validators } from "@angular/forms";
 import { EBtnType } from "../../../../core/enums/btn-type.enum";
 import { RegistrationService } from "../../services/registration/registration.service";
 import { IRegistrationFormValue } from "../../interfaces/form.interface";
+import { EAutocomplete } from "../../../../core/enums/autocomplete.enum";
 
 @Component({
   selector: 'tvt-registration',
@@ -13,6 +14,7 @@ import { IRegistrationFormValue } from "../../interfaces/form.interface";
 export class RegistrationComponent {
   public readonly authorizationLink: EPage = EPage.Authorization;
   public readonly btnType: EBtnType = EBtnType.Submit;
+  public readonly autocomplete: EAutocomplete = EAutocomplete.Off;
   public form = this.fb.group({
     username: ['', [Validators.required]],
     email: ['', [Validators.required]],
