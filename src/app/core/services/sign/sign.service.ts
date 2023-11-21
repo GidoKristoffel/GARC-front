@@ -1,30 +1,29 @@
 import { DestroyRef, Injectable } from '@angular/core';
-import { LocalStorageService } from "../local-storage/local-storage.service";
 import { Router } from "@angular/router";
-import { ELocalStorage } from "../../enums/local-storage";
 import { EPage } from "../../enums/page.enum";
 import { AuthorizationApiService } from "../../../modules/auth/api/authorization/authorization.api.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { authorizationApiResult } from "../../../modules/auth/interfaces/api.interface";
+import { ELocalStorage } from "../../enums/local-storage";
+import { accessTokenResponse } from "../../../shared/interfaces/api.interface";
+import { LocalStorageService } from "../local-storage/local-storage.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignService {
   constructor(
-    private localStorageService: LocalStorageService,
     private router: Router,
     private authorizationApiService: AuthorizationApiService,
-    private destroyRef: DestroyRef
-  ) { }
+    private destroyRef: DestroyRef,
+    private localStorageService: LocalStorageService
+  ) {}
 
   public logIn(email: string, password: string): void {
     if (email && password) {
-
       this.authorizationApiService
         .logIn({email, password})
         .pipe(takeUntilDestroyed(this.destroyRef))
-        .subscribe((response: authorizationApiResult): void => {
+        .subscribe((response: accessTokenResponse): void => {
           this.localStorageService.set(ELocalStorage.Token, (response.accessToken));
           this.router.navigate([EPage.Main]).then();
         });
@@ -35,7 +34,7 @@ export class SignService {
     this.authorizationApiService
       .logOut()
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => {
+      .subscribe((): void => {
         this.localStorageService.remove(ELocalStorage.Token);
         this.router.navigate([EPage.Authorization]).then();
       });
