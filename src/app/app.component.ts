@@ -7,13 +7,13 @@ import { LanguageService } from "./core/services/language/language.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'GARC-front';
+  title: string = 'GARC-front';
 
   constructor(
     private languageService: LanguageService,
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.languageService.init();
   }
 }

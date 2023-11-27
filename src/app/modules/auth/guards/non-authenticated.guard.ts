@@ -9,10 +9,7 @@ import { SecurityService } from "../../../core/services/security/security.servic
 export class NonAuthenticatedGuard  {
   constructor(private securityService: SecurityService, private router: Router) {}
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): boolean {
+  canActivate(): boolean {
     if (!this.securityService.isAuthenticated()) {
       return true;
     } else {
