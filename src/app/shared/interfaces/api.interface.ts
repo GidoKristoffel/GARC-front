@@ -1,7 +1,3 @@
-// export interface registrationApiResult {
-//
-// }
-
 import { HttpStatusCode } from "@angular/common/http";
 
 export interface accessTokenResponse {

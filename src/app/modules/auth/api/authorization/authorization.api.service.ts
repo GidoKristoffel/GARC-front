@@ -9,7 +9,7 @@ import { accessTokenResponse, statusApiResponse, } from "../../../../shared/inte
   providedIn: 'root'
 })
 export class AuthorizationApiService {
-  private readonly api: string = environment.api + '/';
+  private readonly api: string = environment.api + '/user/';
 
   constructor(
     private http: HttpClient

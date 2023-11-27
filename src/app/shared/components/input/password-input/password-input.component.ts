@@ -7,7 +7,7 @@ import { FormGroupDirective } from "@angular/forms";
   templateUrl: './password-input.component.html',
   styleUrls: ['./password-input.component.scss']
 })
-export class PasswordInputComponent extends InjectReactiveForm {
+  export class PasswordInputComponent extends InjectReactiveForm {
   @Input() label: string = '';
   @Input() placeholder: string = '';
   @Input() formField: string = '';

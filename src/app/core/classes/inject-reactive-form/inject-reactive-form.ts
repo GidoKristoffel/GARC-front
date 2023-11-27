@@ -9,7 +9,7 @@ export abstract class InjectReactiveForm implements OnInit {
     protected rootFormGroup: FormGroupDirective
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initForm();
   }
 

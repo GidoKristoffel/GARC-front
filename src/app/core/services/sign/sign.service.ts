@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { EPage } from "../../enums/page.enum";
 import { AuthorizationApiService } from "../../../modules/auth/api/authorization/authorization.api.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { ELocalStorage } from "../../enums/local-storage";
+import { ELocalStorage } from "../../enums/local-storage.enum";
 import { accessTokenResponse } from "../../../shared/interfaces/api.interface";
 import { LocalStorageService } from "../local-storage/local-storage.service";
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from "@ngx-translate/core";
 import { ELanguage } from "../../enums/language.enum";
 import { LocalStorageService } from "../local-storage/local-storage.service";
-import { ELocalStorage } from "../../enums/local-storage";
+import { ELocalStorage } from "../../enums/local-storage.enum";
 import { isStringInEnum } from "../../utilities/enum.utility";
 
 @Injectable({
