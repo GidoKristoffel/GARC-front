@@ -8,7 +8,6 @@ import { SignService } from "../../../../core/services/sign/sign.service";
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  // public readonly page: typeof EPage = EPage;
   public readonly baseUrl: string = EPage.Main + '/';
   public readonly baseUrlAccount: string = EPage.Main + '/' + EPage.Account + '/';
   public readonly baseUrlCalculation: string = EPage.Main + '/' + EPage.Calculation + '/';
