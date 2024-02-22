@@ -82,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "GARC-front:build:production"
+              "buildTarget": "GARC-front:build:production"
             },
             "development": {
-              "browserTarget": "GARC-front:build:development"
+              "buildTarget": "GARC-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "GARC-front:build"
+            "buildTarget": "GARC-front:build"
           }
         },
         "test": {
