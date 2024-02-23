@@ -8,9 +8,7 @@ import { LanguageModule } from "../../modules/language/language.module";
 
 
 @NgModule({
-  declarations: [
-    AuthorizationPageComponent
-  ],
+  declarations: [],
     imports: [
         CommonModule,
         AuthorizationPageRoutingModule,
