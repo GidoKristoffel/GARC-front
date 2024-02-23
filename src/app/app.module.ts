@@ -14,9 +14,7 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,6 +35,6 @@ export function createTranslateLoader(http: HttpClient) {
       multi: true,
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }
