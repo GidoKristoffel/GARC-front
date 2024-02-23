@@ -5,6 +5,7 @@ import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { createTranslateLoader } from "./app.module";
 import { tokenInterceptor } from "./core/interceptors/token.interceptor";
 import { routes } from "./app.routes";
+import { provideAngularSvgIcon } from "angular-svg-icon";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,5 +21,6 @@ export const appConfig: ApplicationConfig = {
       }),
     ),
     provideHttpClient(withInterceptors([tokenInterceptor])),
+    provideAngularSvgIcon(),
   ],
 };
