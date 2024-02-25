@@ -8,7 +8,8 @@ export const mainPage: Routes = [
   },
   {
     path: EPage.Account,
-    loadComponent: () => import('./account/account-page.component').then((c) => c.AccountPageComponent)
+    loadComponent: () => import('./account/account-page.component').then((c) => c.AccountPageComponent),
+    loadChildren: () => import('./account/account-page.routes').then((r) => r.accountPage)
   },
   {
     path: EPage.Calculation,
