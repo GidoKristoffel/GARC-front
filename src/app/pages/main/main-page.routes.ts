@@ -13,7 +13,8 @@ export const mainPage: Routes = [
   },
   {
     path: EPage.Calculation,
-    loadComponent: () => import('./calculation/calculation-page.component').then((c) => c.CalculationPageComponent)
+    loadComponent: () => import('./calculation/calculation-page.component').then((c) => c.CalculationPageComponent),
+    loadChildren: () => import('./calculation/calculation-page.routes').then((r) => r.calculationPage)
   },
   {
     path: EPage.Settings,
