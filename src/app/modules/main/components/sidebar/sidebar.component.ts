@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { EPage } from "../../../../core/enums/page.enum";
 import { SignService } from "../../../../core/services/sign/sign.service";
+import { Sidebar } from "../../interfaces/sidebar";
+import { sidebarData } from "../../data-structures/sidebar.structure";
+import { EPage } from "../../../../core/enums/page.enum";
+import { baseUrl } from "../../../../core/constants/route.constant";
 
 @Component({
   selector: 'tvt-sidebar',
@@ -8,19 +11,8 @@ import { SignService } from "../../../../core/services/sign/sign.service";
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  public readonly baseUrl: string = EPage.Main + '/';
-  public readonly baseUrlAccount: string = EPage.Main + '/' + EPage.Account + '/';
-  public readonly baseUrlCalculation: string = EPage.Main + '/' + EPage.Calculation + '/';
-  public readonly page = {
-    dashboard: this.baseUrl + EPage.Dashboard,
-    profile: this.baseUrlAccount + EPage.Profile,
-    accountWeapons: this.baseUrlAccount + EPage.AccountWeapons,
-    materials: this.baseUrlAccount + EPage.Materials,
-    artifacts: this.baseUrlCalculation + EPage.Artifacts,
-    talents: this.baseUrlCalculation + EPage.Talents,
-    weapons: this.baseUrlCalculation + EPage.Weapons,
-    settings: this.baseUrl + EPage.Settings,
-  };
+  public readonly sidebar: Sidebar = sidebarData;
+  public readonly settingsLink: string = baseUrl + EPage.Settings;
 
   constructor(
     private signService: SignService,

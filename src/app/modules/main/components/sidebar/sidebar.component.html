@@ -1,19 +1,29 @@
 <div class="sidebar flex-column">
   <div class="flex-column gap-4">
-    <tvt-sidebar-btn icon="./assets/images/icons/dashboard.svg" label="page.main.sidebar.dashboard" [link]="page.dashboard"></tvt-sidebar-btn>
-    <div class="sidebar-header">{{ 'page.main.sidebar.account' | translate }}</div>
-    <tvt-horizontal-divider></tvt-horizontal-divider>
-    <tvt-sidebar-btn icon="./assets/images/icons/account.svg" label="page.main.sidebar.profile" [link]="page.profile"></tvt-sidebar-btn>
-    <tvt-sidebar-btn icon="./assets/images/icons/account-weapons.svg" label="page.main.sidebar.account-weapons" [link]="page.accountWeapons"></tvt-sidebar-btn>
-    <tvt-sidebar-btn icon="./assets/images/icons/materials.svg" label="page.main.sidebar.materials" [link]="page.materials"></tvt-sidebar-btn>
-    <div class="sidebar-header">{{ 'page.main.sidebar.calculation' | translate }}</div>
-    <tvt-horizontal-divider></tvt-horizontal-divider>
-    <tvt-sidebar-btn icon="./assets/images/icons/artifacts.svg" label="page.main.sidebar.artifacts" [link]="page.artifacts"></tvt-sidebar-btn>
-    <tvt-sidebar-btn icon="./assets/images/icons/talents.svg" label="page.main.sidebar.talents" [link]="page.talents"></tvt-sidebar-btn>
-    <tvt-sidebar-btn icon="./assets/images/icons/weapons.svg" label="page.main.sidebar.weapons" [link]="page.weapons"></tvt-sidebar-btn>
+    @for (sidebarGroup of sidebar; track sidebarGroup.id) {
+      @if (sidebarGroup.title) {
+        <div class="sidebar-header">{{ sidebarGroup.title | translate }}</div>
+        <tvt-horizontal-divider></tvt-horizontal-divider>
+      }
+
+      @for (sidebarItem of sidebarGroup.items; track sidebarItem.id) {
+        <tvt-sidebar-btn [icon]="sidebarItem.icon" [label]="sidebarItem.title" [link]="sidebarItem.link"></tvt-sidebar-btn>
+      }
+    }
+<!--    <tvt-sidebar-btn icon="./assets/images/icons/dashboard.svg" label="page.main.sidebar.dashboard" [link]="page.dashboard"></tvt-sidebar-btn>-->
+<!--    <div class="sidebar-header">{{ 'page.main.sidebar.account' | translate }}</div>-->
+<!--    <tvt-horizontal-divider></tvt-horizontal-divider>-->
+<!--    <tvt-sidebar-btn icon="./assets/images/icons/account.svg" label="page.main.sidebar.profile" [link]="page.profile"></tvt-sidebar-btn>-->
+<!--    <tvt-sidebar-btn icon="./assets/images/icons/account-weapons.svg" label="page.main.sidebar.account-weapons" [link]="page.accountWeapons"></tvt-sidebar-btn>-->
+<!--    <tvt-sidebar-btn icon="./assets/images/icons/materials.svg" label="page.main.sidebar.materials" [link]="page.materials"></tvt-sidebar-btn>-->
+<!--    <div class="sidebar-header">{{ 'page.main.sidebar.calculation' | translate }}</div>-->
+<!--    <tvt-horizontal-divider></tvt-horizontal-divider>-->
+<!--    <tvt-sidebar-btn icon="./assets/images/icons/artifacts.svg" label="page.main.sidebar.artifacts" [link]="page.artifacts"></tvt-sidebar-btn>-->
+<!--    <tvt-sidebar-btn icon="./assets/images/icons/talents.svg" label="page.main.sidebar.talents" [link]="page.talents"></tvt-sidebar-btn>-->
+<!--    <tvt-sidebar-btn icon="./assets/images/icons/weapons.svg" label="page.main.sidebar.weapons" [link]="page.weapons"></tvt-sidebar-btn>-->
   </div>
   <div class="flex-column gap-4">
-    <tvt-sidebar-btn icon="./assets/images/icons/settings.svg" label="page.main.sidebar.settings" [link]="page.settings"></tvt-sidebar-btn>
+    <tvt-sidebar-btn icon="./assets/images/icons/settings.svg" label="page.main.sidebar.settings" [link]="settingsLink"></tvt-sidebar-btn>
     <tvt-horizontal-divider></tvt-horizontal-divider>
     <tvt-sidebar-btn icon="./assets/images/icons/exit.svg" label="page.main.sidebar.exit" (click)="logOut()"></tvt-sidebar-btn>
   </div>
