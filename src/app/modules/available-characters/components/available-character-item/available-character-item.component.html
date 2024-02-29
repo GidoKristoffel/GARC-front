@@ -1,0 +1,6 @@
+<div *ngIf="character">
+  <div>
+    <img [ngSrc]="character.icon" [alt]="character.name.en" width="100" height="100">
+  </div>
+  <div>{{ character.name[currentLang] }}</div>
+</div>
