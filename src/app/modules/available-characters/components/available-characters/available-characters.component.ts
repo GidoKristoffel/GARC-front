@@ -1,15 +1,16 @@
-import { Component, DestroyRef, OnInit } from '@angular/core';
-import { AvailableCharactersApi } from "../../api/available-characters.api";
-import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { IAvailableCharactersResponse } from "../../interfaces/api.interface";
+import { Component, OnInit } from '@angular/core';
 import { ICharacter } from "../../interfaces/common.inteface";
-import { JsonPipe } from "@angular/common";
+import { JsonPipe, NgForOf } from "@angular/common";
+import { AvailableCharactersService } from "../../services/available-characters.service";
+import { AvailableCharacterItemComponent } from "../available-character-item/available-character-item.component";
 
 @Component({
   selector: 'tvt-available-characters',
   standalone: true,
   imports: [
-    JsonPipe
+    JsonPipe,
+    AvailableCharacterItemComponent,
+    NgForOf
   ],
   templateUrl: './available-characters.component.html',
   styleUrl: './available-characters.component.scss'
@@ -18,8 +19,7 @@ export class AvailableCharactersComponent  implements OnInit {
   public characters: ICharacter[] = [];
 
   constructor(
-    private readonly availableCharactersApi: AvailableCharactersApi,
-    private destroyRef: DestroyRef
+    private readonly availableCharactersService: AvailableCharactersService
   ) {}
 
   ngOnInit(): void {
@@ -27,11 +27,8 @@ export class AvailableCharactersComponent  implements OnInit {
   }
 
   private getCharacters(): void {
-    this.availableCharactersApi
-      .get()
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((response: IAvailableCharactersResponse): void => {
-        this.characters = response.availableCharacters;
-      });
+    this.availableCharactersService.get((characters: ICharacter[]) => {
+      this.characters = characters;
+    });
   }
 }
