@@ -8,4 +8,6 @@ import { EBtnType } from "../../../../core/enums/btn-type.enum";
 })
 export class DefaultBtnComponent {
   @Input() type: EBtnType = EBtnType.Button;
+  @Input() disabled: boolean = false;
+  @Input() loading: boolean = false;
 }
