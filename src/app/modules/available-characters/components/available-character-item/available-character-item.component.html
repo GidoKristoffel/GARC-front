@@ -1,6 +1,8 @@
-<div *ngIf="character">
-  <div>
-    <img [ngSrc]="character.icon" [alt]="character.name.en" width="100" height="100">
+<div *ngIf="character" class="available-character-card-border" [class.selected]="selected" (click)="onToggle()">
+  <div class="available-character-card pointer">
+    <div class="icon" [class]="character.quality">
+      <img [ngSrc]="character.icon" [alt]="character.name.en" width="84" height="84">
+    </div>
+    <div class="name ellipsis">{{ character.name[currentLang] }}</div>
   </div>
-  <div>{{ character.name[currentLang] }}</div>
 </div>

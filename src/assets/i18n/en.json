@@ -76,5 +76,10 @@
     "en": "English",
     "ua": "Ukrainian",
     "ru": "Russian"
+  },
+  "shared": {
+    "btn": {
+      "save": "Save"
+    }
   }
 }
