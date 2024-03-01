@@ -8,7 +8,6 @@ import { AvailableCharacterItemComponent } from "../available-character-item/ava
   selector: 'tvt-available-characters',
   standalone: true,
   imports: [
-    JsonPipe,
     AvailableCharacterItemComponent,
     NgForOf
   ],

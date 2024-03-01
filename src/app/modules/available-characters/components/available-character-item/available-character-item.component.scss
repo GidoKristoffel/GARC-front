@@ -1,0 +1,52 @@
+@import "color";
+
+.available-character-card {
+  border-radius: 8px;
+  background: $outer-space-crayola;
+  position: relative;
+
+  & .icon {
+    border-radius: 8px 8px 21px 0;
+    overflow: hidden;
+
+    & > img {
+      display: block;
+    }
+  }
+
+  & .name {
+    width: 84px;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 6px;
+    box-sizing: border-box;
+  }
+}
+
+.available-character-card-border {
+  border: 2px solid rgb($white, 0.0);
+  border-radius: 10px;
+
+  &:hover {
+    border: 2px solid $granite-gray;
+    background-color: $granite-gray;
+  }
+
+  & .icon {
+    opacity: 0.5;
+  }
+}
+
+.selected {
+  border: 2px solid $tan;
+  background-color: $tan;
+
+  &:hover {
+    border: 2px solid $tan;
+    background-color: $tan;
+  }
+
+  & .icon {
+    opacity: 1;
+  }
+}
