@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { ICharacter } from "../../interfaces/common.inteface";
+import { Component, DestroyRef, OnInit } from '@angular/core';
+import { ICharacter, IUpdateAvailableCharacters } from "../../interfaces/common.inteface";
 import { JsonPipe, NgForOf } from "@angular/common";
-import { AvailableCharactersService } from "../../services/available-characters.service";
+import { AvailableCharactersService } from "../../services/available-characters/available-characters.service";
 import { AvailableCharacterItemComponent } from "../available-character-item/available-character-item.component";
 import { ButtonModule } from "../../../../shared/components/button/button.module";
 import { TranslateModule } from "@ngx-translate/core";
+import { SelectedCharactersService } from "../../services/selected-characters/selected-characters.service";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'tvt-available-characters',
@@ -20,16 +22,18 @@ import { TranslateModule } from "@ngx-translate/core";
 })
 export class AvailableCharactersComponent  implements OnInit {
   public characters: ICharacter[] = [];
-  public selected: string[] = [];
-  public defaultSelected: string[] = [];
   public changed: boolean = false;
+  public loading: boolean = false;
 
   constructor(
-    private readonly availableCharactersService: AvailableCharactersService
+    private readonly availableCharactersService: AvailableCharactersService,
+    private readonly selectedCharactersService: SelectedCharactersService,
+    private destroyRef: DestroyRef
   ) {}
 
   ngOnInit(): void {
     this.getCharacters();
+    this.watchChanged();
   }
 
   private getCharacters(): void {
@@ -40,24 +44,31 @@ export class AvailableCharactersComponent  implements OnInit {
   }
 
   private initSelected(characters: ICharacter[]): void {
-    this.defaultSelected = characters.filter((character: ICharacter) => character.available).map((character: ICharacter) => character.id).sort();
-    this.selected = [...this.defaultSelected];
-    console.log(this.defaultSelected);
+    this.selectedCharactersService.initDefault(characters);
   }
 
   public onToggle(add: boolean, id: string): void {
-    if (add) {
-      if (!this.selected.includes(id)) {
-        this.selected.push(id);
-      }
-    } else {
-      const index = this.selected.indexOf(id);
-      if (index !== -1) {
-        this.selected.splice(index, 1);
-      }
-    }
-    this.selected = this.selected.sort();
+    this.selectedCharactersService.toggle(add, id);
+  }
 
-    this.changed = JSON.stringify(this.selected) !== JSON.stringify(this.defaultSelected);
+  private watchChanged(): void {
+    this.selectedCharactersService
+      .watchChanged()
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((changed: boolean): void => {
+        this.changed = changed;
+      });
+  }
+
+  public save(): void {
+    this.loading = true;
+    const characterIds: IUpdateAvailableCharacters = this.selectedCharactersService.get();
+    this.availableCharactersService.update(characterIds, (characters: ICharacter[]): void => {
+      this.characters = characters;
+      this.initSelected(this.characters);
+      this.loading = false;
+    }, () => {
+      this.loading = false;
+    });
   }
 }
