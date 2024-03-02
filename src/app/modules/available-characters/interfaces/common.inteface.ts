@@ -40,3 +40,8 @@ export interface ICharacter {
   cardIcon: string;
   available: boolean;
 }
+
+export interface IUpdateAvailableCharacters {
+  charactersToAdd: string[],
+  charactersToRemove: string[]
+}

@@ -1,12 +1,12 @@
-<form class="height-100 flex-column gap-8 padding-8">
+<div class="height-100 flex-column gap-8 padding-8">
   <div class="card-wrapper-form-main flex-column flex-fill-space gap-4">
     <div class="available-characters">
       <tvt-available-character-item *ngFor="let character of characters" [character]="character" (toggle)="onToggle($event, character.id)"></tvt-available-character-item>
     </div>
   </div>
   <div class="card-wrapper-btn flex-row-right gap-8">
-    <tvt-default-btn [disabled]="!changed">
+    <tvt-default-btn [disabled]="!changed" (click)="save()" [loading]="loading">
       {{ "shared.btn.save" | translate }}
     </tvt-default-btn>
   </div>
-</form>
+</div>
