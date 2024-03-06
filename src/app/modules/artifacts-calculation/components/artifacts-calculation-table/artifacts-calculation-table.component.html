@@ -1,0 +1,12 @@
+<div>
+  <div class="category" *ngFor="let category of calculation">
+    <div class="title">{{ category.label }}</div>
+    <div class="body">
+      <div *ngFor="let character of category.characters">
+        id: {{ character.id }}
+        name: {{ character.name }}
+        icon: {{ character.icon }}
+      </div>
+    </div>
+  </div>
+</div>

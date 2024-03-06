@@ -1,10 +1,11 @@
 import { ELanguage } from "../../../core/enums/language.enum";
+import { EArtifactLevelingCategories } from "../enums/artifact-leveling-categories.enum";
 
 export type TArtifactsCalculation = IArtifactCalculation[];
 
 export interface IArtifactCalculation {
   index: number;
-  label: string;
+  label: EArtifactLevelingCategories;
   characters: IArtifactsCharacters[];
 }
 
@@ -23,6 +24,6 @@ export type TUpdateArtifactsCalculation = IUpdateArtifactCalculation[];
 
 export interface IUpdateArtifactCalculation {
   index: number;
-  label: string;
+  label: EArtifactLevelingCategories;
   characterIds: string[];
 }
