@@ -34,6 +34,8 @@ export class ArtifactsCalculationComponent implements OnInit {
   }
 
   private getCalculation(): void {
-    this.artifactsCalculationService.get();
+    this.artifactsCalculationService.get((calculation: TArtifactsCalculation): void => {
+      this.calculation = calculation;
+    });
   }
 }

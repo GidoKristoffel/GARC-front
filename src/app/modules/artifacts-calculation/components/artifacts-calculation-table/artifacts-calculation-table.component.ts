@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TArtifactsCalculation } from "../../interfaces/common.inteface";
 import { NgForOf } from "@angular/common";
 
@@ -12,5 +12,5 @@ import { NgForOf } from "@angular/common";
   styleUrl: './artifacts-calculation-table.component.scss'
 })
 export class ArtifactsCalculationTableComponent {
-  public calculation: TArtifactsCalculation = [];
+  @Input() calculation: TArtifactsCalculation = [];
 }
