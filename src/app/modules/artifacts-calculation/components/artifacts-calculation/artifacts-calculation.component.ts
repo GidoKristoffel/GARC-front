@@ -8,7 +8,7 @@ import { TranslateModule } from "@ngx-translate/core";
 import {
   ArtifactsCalculationTableComponent
 } from "../artifacts-calculation-table/artifacts-calculation-table.component";
-import { IArtifactsCharacters, TArtifactsCalculation } from "../../interfaces/common.inteface";
+import { TArtifactsCalculation } from "../../interfaces/common.inteface";
 import { ArtifactsCalculationService } from "../../services/artifacts-calculation.service";
 
 @Component({
